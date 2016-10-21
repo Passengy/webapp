@@ -1,0 +1,24 @@
+<!--<h2>ROOMS</h2>
+<ul class="items">
+ <li *ngFor="let room of rooms"
+    [class.selected]="isSelected(room)"
+    (click)="onSelect(room)">
+    <span class="badge">{{room.id}}</span> {{room.name}}
+ </li>
+</ul>-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3"></div> 
+<div class="col-xs-12 col-sm-12 col-md-9">
+    <div *ngFor="let room of rooms" [class.selected]="isSelected(room)" (click)="onSelect(room)" class="col-sm-6 col-md-6 card">
+      <md-card>
+        <md-card-header>
+            <img md-card-avatar src="../../assets/CROPPED-DSC_1861 copy.jpg">
+            <md-card-title><h4>Cosy Bedroom in Brixton</h4></md-card-title>
+            <md-card-subtitle>Header subtitle</md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="{{room.url}}">
+    </md-card>
+</div>
+</div>
+</div>

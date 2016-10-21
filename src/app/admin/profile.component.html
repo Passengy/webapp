@@ -1,0 +1,54 @@
+<md-card class="demo-card demo-basic">
+  <md-toolbar color="primary">Required</md-toolbar>
+  <md-card-content>
+    <form>
+        <div>
+            <label for="lastname">Last Name : </label>
+            <md-input type="text" class="last-name-full-width" placeholder="Last Name" id="lastname" ></md-input>
+        </div>
+        <br>
+        <div>
+            <label for="firstname">Fist Name : </label>
+            <md-input type="text" class="first-name-full-width" placeholder="First Name" id="firstname"></md-input>
+        </div>
+        <span>This is only shared once you have a confirmed booking with another Passengy user.</span>
+        <br>
+        <div>
+            <label for="firstname">Phone : </label>
+            <md-input type="phone" class="phone-full-width" placeholder="Phone number" id="phone"></md-input>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email Address: </label>
+            <md-input type="email" class="repeat-email-full-width" placeholder="Email" id="email"></md-input>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password : </label>
+            <md-input type="text" class="password-full-width" placeholder="Password" minlength="6" id="password">
+            <md-hint align="end">Password at least 6 characters</md-hint>
+            </md-input>
+        </div>
+        <div>
+            <label for="gender">I Am</label>
+            <select class="form-control" id="gender" name="gender" required>
+            <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+            </select>
+        </div>
+        <span>We use this data for analysis and never share it with other users.</span>
+        <br>
+        <div>
+            <label for="address">Where You Live: </label>
+            <md-input type="text" class="address-full-width" placeholder="Your address" id="address"></md-input>
+        </div>
+        <br>
+        <div>
+            <label for="birth">Birth date : </label>
+            <md-input type="text" placeholder="DD" id="birth"></md-input>
+            <md-input type="text" placeholder="MM" id="birth"></md-input>
+            <md-input type="text" placeholder="YYYY" id="birth"></md-input>
+        </div>
+        </form>
+      <button md-raised-button>Save</button>
+  </md-card-content>
+</md-card>

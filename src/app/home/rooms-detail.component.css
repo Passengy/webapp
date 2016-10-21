@@ -1,0 +1,143 @@
+div.container{
+    padding: 20px 0;
+}
+.sub-md-title{
+    background-color: #333;
+    opacity: 0.8;
+    color: white;
+}
+[md-raised-button].instant_book{
+    width: 100%;
+    padding: 10px;
+}
+li{
+    list-style: none;
+}
+md-card{
+    padding: 0;
+}
+md-card-content{
+    padding: 16px;
+}
+md-card-header.sub-md-title{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-size: 18px;
+}
+div.title_title_details{
+    margin-left: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center; 
+    align-items: center;
+}
+.pernight{
+    margin-right: 10px; 
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+div.div_date_options{
+    margin: 0;
+}
+ul.date_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+li.date{
+    display: flex;
+    flex-direction: column;
+}
+li.date div{
+    margin-bottom: 5px;
+}
+input[type="date"]{
+    width: 130px;
+    border-radius: 3px;
+    border: 1px solid #333; 
+    outline: none;
+}
+select{
+    border-radius: 3px;
+    border: 1px solid #333; 
+    outline: none;
+}
+div.global_details{
+    margin: 20px 0;
+}
+div.details{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 16px;
+}
+hr.selector_inst {
+  border: 1px solid #333;
+}
+div.report{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+md-icon{
+    font-size: 16px;
+}
+div.title_details{
+    width: 100%;
+    margin: 30px 0;
+}
+div.image_details{
+    padding: 0 40px;
+}
+[md-card-avatar]{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+div.namehost{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    margin-left: -5px;
+}
+div.subtitle_details{
+    margin: 10px 10px 10px 30px;
+    display: flex;
+    flex-flow: row wrap;
+}
+[md-card-title]{
+    font-size: 18px;
+}
+div.md-card-and-name{
+    display: flex;
+    flex-direction: column;
+}
+div.md-card-and-name div{
+    margin-bottom: 5px;
+}
+hr.separator{
+    border-bottom: 1px solid #333;
+}
+div.main_description{
+    margin: 10px 30px;
+}
+.title{
+    margin-bottom: 15px;
+}
+.about{
+    padding: 10px;
+}
+.thespace{
+    margin-bottom: 20px;
+}
+[md-raised-button]{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}

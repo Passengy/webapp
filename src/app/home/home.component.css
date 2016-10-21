@@ -1,0 +1,43 @@
+div.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 200px;
+}
+.search-button{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.search-button button{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
+h1 b{
+    color: #2ecc71;
+}
+div.input{
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+div md-icon{
+    margin-left: 5px;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: -2px;
+}
+input, input:focus{
+    width: 80%;
+    padding: 10px;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: 400px;
+    font-size: 16px;
+    color: #333;
+    outline: none !important;
+    border-color: #2ecc71;
+    border: none;
+}

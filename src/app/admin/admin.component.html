@@ -1,0 +1,30 @@
+<div class="container-fluid">
+<md-tab-group>
+  <md-tab>
+    <template md-tab-label><div routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</div></template>
+    <template md-tab-content> 
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./inbox" routerLinkActive="active">Inbox</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./profile" routerLinkActive="active">Profile</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./account" routerLinkActive="active">Account</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./manage" routerLinkActive="active">Manage your post</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+</md-tab-group>
+<router-outlet></router-outlet>
+</div>

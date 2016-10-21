@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+html, body {
+  height: 100vh;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: #333;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: white;
+}
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+md-input{
+  width: 100%;
+  padding: 10px 0;
+}
+nav span a {
+  text-decoration: none;
+  color: white;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+nav li{
+  margin: 0 10px;
+  vertical-align: middle;
+}
+[md-button]{
+  font-size: 16px;
+}
+
+li.become_host{
+  border: 2px solid #c4c4c4;
+  border-radius: 5px;
+}
+.icon-20 {
+  font-size: 20px;
+}
+h4{
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+li{
+  font-size: 14px;
+}
+md-toolbar.main{
+  border-bottom: 1px solid;
+  border-color: #c4c4c4;
+  background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px #c4c4c4;
+	   -moz-box-shadow: 0 8px 6px -6px #c4c4c4;
+	        box-shadow: 0 8px 6px -6px #c4c4c4;
+}

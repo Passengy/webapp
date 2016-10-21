@@ -1,0 +1,101 @@
+<div class="container">
+<div class="row">
+  <div class="title"><h2>Create post</h2></div>
+<div class="col-sm-3 col-md-3">
+  <label class="fileContainer">
+    <div class="file_upl">Click here to trigger the file uploader!</div>
+    <div class="plus">+</div>
+    <input type="file"/>
+  </label>
+</div>
+<div class="col-sm-9 col-md-9">
+<form novalidate #hosting="ngForm" (ngSubmit)="next()">
+    <legend><b>Place's information</b></legend>
+    <div>
+      <label for="nameofplace"><h4>Name of place :</h4></label>
+      <md-input type="text" id="lastname" required name="nameofplace"></md-input>
+    </div>
+    <div>
+      <label for="description"><h4>Description :</h4></label>
+      <textarea class="form-control" rows="3"rows="3" name="description" id="description"></textarea>
+    </div>
+    <div>
+      <label for="price"><h4>Price : </h4></label>
+      <md-input align="end" id="price" required class="price" name="price">
+        <span md-prefix>$&nbsp;</span>
+        <span md-suffix>.00</span>
+      </md-input>
+    </div>
+    <div>
+      <legend><b>Address</b></legend>
+      <div class="label_select">
+        <label for="country"><h4>Country : </h4></label>
+        <select id="country" required class="form-control bootstrap">
+          <option *ngFor="let country of countries" [value]="country" required>{{country}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="streetaddress"><h4>Street address : </h4></label>
+        <md-input type="text" id="streetaddress" required name="streetaddress"></md-input>
+      </div>
+      <div>
+        <label for="apt"><h4>Apt, Suite, Bldg. (Optional) :</h4></label>
+        <md-input type="text" id="apt" required name="apt"></md-input>
+      </div>
+      <div class="label_select">
+        <label for="city"><h4>City : </h4></label>
+        <select id="city" required class="form-control bootstrap">
+        <option *ngFor="let city of cities" [value]="city" required name="city">{{city}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="zip"><h4>ZIP code : </h4></label>
+        <md-input type="text" id="zip" name="zip"></md-input>
+      </div>
+    </div>
+    <div>
+      <legend><b>What kind of place are you listing? </b></legend>
+      <md-radio-group required [(value)]="kind">
+        <md-radio-button *ngFor="let kind of kindofplace" [value]="kind.value">
+          {{kind.name}}
+        </md-radio-button>
+      </md-radio-group>
+      <br>
+      <div>
+        <legend><b>What type of property is this :</b></legend>
+        <select id="type" class="form-control bootstrap" name="type">
+        <option *ngFor="let type of typeofplace" [value]="type">{{type}}</option>
+        </select>
+      </div>
+      <div class="amneties">
+        <legend><b>What amenities do you offer?</b></legend>
+        <div>
+          <ul>
+            <li *ngFor="let amnet of amneties" name="amenities">
+              <md-checkbox [checked]="amnet.completed" (change)="amnet.completed = $event">
+                {{amnet.name}}
+              </md-checkbox>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <legend><b>Safety amenities</b></legend>
+        <div>
+          <ul>
+            <li *ngFor="let safety of safeties" name="safeties">
+              <md-checkbox [checked]="safety.completed"
+                          (change)="safety.completed = $event">
+                {{safety.name}}
+              </md-checkbox>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+  <button md-raised-button color="primary" type="submit">Next</button>
+</form>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

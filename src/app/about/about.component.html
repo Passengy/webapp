@@ -1,0 +1,40 @@
+<div class="container-fluid">
+<md-tab-group>
+  <md-tab>
+    <template md-tab-label><div routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</div></template>
+    <template md-tab-content> 
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./inbox" routerLinkActive="active">Help</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./profile" routerLinkActive="active">Terms & Privacy</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./account" routerLinkActive="active">Policies</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./manage" routerLinkActive="active">Trust & Safety</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./manage" routerLinkActive="active">Disaster Response</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label><div routerLink="./manage" routerLinkActive="active">Home Safety</div></template>
+    <template md-tab-content>
+    </template>
+  </md-tab>
+</md-tab-group>
+<router-outlet></router-outlet>
+</div>

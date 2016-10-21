@@ -1,0 +1,30 @@
+<md-toolbar class="main">
+    <div routerLink="/">Passengy</div>
+    <span class="fill-remaining-space"></span>
+    <nav *ngIf="!authService.isLoggedIn">
+        <ul>
+            <li class="become_host"><button md-button routerLink="/dashboard" routerLinkActive="active">Become a Host</button></li>
+            <li class="become_host"><button md-button routerLink="/login" routerLinkActive="active">Log In</button></li>
+        </ul>
+    </nav>
+    <nav *ngIf="authService.isLoggedIn">
+        <ul>
+            <li class="become_host"><div md-button routerLink="/dashboard" routerLinkActive="active">Become a Host</div></li>
+            <li>
+                <img md-card-avatar src="../assets/CROPPED-DSC_1861 copy.jpg">
+            </li>
+            <li>
+                <button md-icon-button [md-menu-trigger-for]="menu">
+                <md-icon>more_vert</md-icon>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</md-toolbar>
+<md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item routerLink="/about" routerLinkActive="active">Help</button>
+    <button md-menu-item routerLink="/admin" routerLinkActive="active">Settings</button>
+    <button md-menu-item (click)="logout()">Log Out</button>
+</md-menu>
+<router-outlet></router-outlet>
+

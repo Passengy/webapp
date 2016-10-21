@@ -1,0 +1,42 @@
+div.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+[md-raised-button]{
+    margin-top: 20px; 
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
+h4 b{
+    font-size: 16px;
+    font-weight: 400;
+}
+.social{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.social button{
+    margin: 2px;
+}
+button.facebook{
+    background-color: #3a579d;;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+}
+button.google{
+    background-color: #dd4b39;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+}
+i{
+    font-size: 18px;
+    padding-right: 2px; 
+    vertical-align: center;
+}

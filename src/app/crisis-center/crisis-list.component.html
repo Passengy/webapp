@@ -1,0 +1,21 @@
+  <ul class="items">
+      <li *ngFor="let crisis of crises"
+        [class.selected]="isSelected(crisis)"
+        (click)="onSelect(crisis)">
+        <span class="badge">{{crisis.id}}</span> {{crisis.name}}
+      </li>
+    </ul>
+    <md-grid-list cols="4" rowHeight="200px">
+      <md-grid-tile *ngFor="let image of images">
+        <img src="{{image.url}}" alt="" [class.selected]="asSelected(image)" (click)="inSelect(image)">
+          <md-grid-tile-footer>
+            <h3 md-line>{{image.name}}</h3>
+          <span md-line>Human: {{image.human}}</span>
+          <button md-icon-button>
+            <md-icon>info</md-icon>
+          </button>
+        </md-grid-tile-footer>
+      </md-grid-tile>
+    </md-grid-list> 
+ 
+<router-outlet></router-outlet>
