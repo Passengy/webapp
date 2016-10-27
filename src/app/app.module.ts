@@ -22,7 +22,17 @@ import { DialogService }        from './dialog.service';
 import { AppService } from './app.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
-import { CanDeactivateGuard } from './can-deactivate-guard.service'
+import { CanDeactivateGuard } from './can-deactivate-guard.service';
+
+//
+import { AngularFireModule} from 'angularfire2/index';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyDCkNsnaOe3sdLq8kVU-qyG0xvYSH8F1kE",
+    authDomain: "passengy.firebaseapp.com",
+    databaseURL: "https://passengy.firebaseio.com",
+    storageBucket: "passengy.appspot.com"
+}
 
 
 @NgModule({
@@ -38,7 +48,8 @@ import { CanDeactivateGuard } from './can-deactivate-guard.service'
     PagenotfoundModule,
     AboutModule,
     ApplicationRoutingModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   declarations: [
     AppComponent

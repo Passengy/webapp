@@ -73,8 +73,11 @@ div.label_select{
     display: flex;
     align-items: center;
 }
-button [md-raised-button]{
+button{
     font-weight: 300;
     font-size: 16px;
+    color: white;
+}
+[md-raised-button]{
     color: white;
 }

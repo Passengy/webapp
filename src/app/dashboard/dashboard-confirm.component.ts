@@ -4,8 +4,7 @@ import {MdSidenav, MdDialog, MdDialogConfig} from "@angular/material";
 
 @Component({
     selector: 'activate-post',
-    templateUrl: 'activatepost.html',
-    styleUrls: ['dashboard.component.css']
+    templateUrl: 'activatepost.html'
 })
 
 export class ActivatePost{
@@ -16,7 +15,8 @@ export class ActivatePost{
 }
 
 @Component({
-    templateUrl: 'dashboard-confirm.component.html'
+    templateUrl: 'dashboard-confirm.component.html',
+    styleUrls: ['./dashboard.component.css']
 })
 export class DashboardConfirmComponent implements OnInit {
     constructor(private router: Router, public dialog: MdDialog, public vcr: ViewContainerRef) { }

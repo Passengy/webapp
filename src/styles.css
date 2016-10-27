@@ -49,7 +49,9 @@ nav li{
 [md-button]{
   font-size: 16px;
 }
-
+[md-button]{
+  font-size: 16px;
+}
 li.become_host{
   border: 2px solid #c4c4c4;
   border-radius: 5px;
