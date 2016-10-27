@@ -14,19 +14,19 @@ import { AuthGuard }                from '../auth-guard.service';
       { path: 'dashboard', 
         component: DashboardComponent,
         canActivate: [AuthGuard],
-        canLoad: [AuthGuard]
+        // canLoad: [AuthGuard]
       },
       {
         path: 'dashboard/payment',
         component: DashboardPaymentComponent,
         canActivate: [AuthGuard],
-        canLoad: [AuthGuard]
+        // canLoad: [AuthGuard]
       },
       {
         path: 'dashboard/confirm',
         component: DashboardConfirmComponent,
         canActivate: [AuthGuard],
-        canLoad: [AuthGuard]
+        // canLoad: [AuthGuard]
       }
     ])
   ],

@@ -40,3 +40,12 @@ i{
     padding-right: 2px; 
     vertical-align: center;
 }
+div.forgot{
+    display: flex;
+    justify-content: center;
+    color: #2ecc71;
+}
+.alert{
+    background-color: #e74c3c;
+    color: white;
+}

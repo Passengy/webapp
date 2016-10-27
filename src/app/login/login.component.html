@@ -12,43 +12,51 @@
           <br>
           <h4><b>Sign in with email and password </b></h4>
           <br>
-          <form novalidate (ngSubmit)="login()" #loginForm="ngForm">
-          <md-input type="email" placeholder="Email" required [ngModel]="login.email" name="email"></md-input>
-          <md-input type="password" placeholder="Password" required minlength="6" [ngModel]="login.password" name="password" #password="ngModel">
+          <md-card [hidden]="!alert" class="alert">Email or password incorrect!!!<br></md-card>
+          <form (ngSubmit)="login()" #registerForm="ngForm">
+          <md-input type="email" placeholder="Email" required [(ngModel)]="existLogin.email" name="email"></md-input>
+          <md-input type="password" placeholder="Password" required minlength="6" [(ngModel)]="existLogin.password" name="password" #password="ngModel">
             <md-hint align="end">Password at least 6 characters</md-hint>
             <br>
           </md-input>
           <br>
           <div><md-card [hidden]="password.valid || password.pristine" class="alert alert-danger">Password must be at least 6 characters</md-card></div>
+          <br>
+          <div class="forgot" href="/">Forgot password?</div>
+          <br>
           <button type="submit" md-raised-button color="primary">Sign in</button>
           </form>
+          <button type="submit" md-raised-button (click)="logout()" color="primary">logout</button>
       </template>
     </md-tab>
     <md-tab>
       <template md-tab-label>Sign up</template>
       <template md-tab-content>
+        <!--<div>
+           <h1>{{ (item | async)?.firstname }}</h1>
+          <h1>{{ (item | async)?.age }}</h1>
+        </div>-->
               <div>
                 <div class="social">
                   <button md-button class="facebook"><i class="ion-social-facebook"></i> Sign up with Facebook</button>
                   <button md-button class="google"><i class="ion-social-googleplus"></i> Sign up with Google</button>
                 </div>
                 <br>
-                <h4><b>Sign up with email and password </b></h4>
-                <form (ngSubmit)="submit()" novalidate #registerForm="ngForm" password-matcher>
-                <md-input type="text" placeholder="Last Name" required [ngModel]="registerForm.lastname" name="lastname"></md-input><br>
-                <md-input type="text" placeholder="First Name" required [ngModel]="registerForm.firstname" name="firstname"></md-input><br>
-                <md-input type="phone" placeholder="Phone number" required [ngModel]="registerForm.phone" name="phone"></md-input><br>
-                <md-input type="email" placeholder="Email" required [ngModel]="registerForm.email" name="email"></md-input><br>
-                <md-input type="password" placeholder="Password" required minlength="6" [ngModel]="registerForm.password" name="password">
+                <form (ngSubmit)="createUser()" #registerForm="ngForm" password-matcher>
+                <md-input type="text" placeholder="Last Name" required [(ngModel)]="newLogin.lastname" name="lastname"></md-input><br>
+                <md-input type="text" placeholder="First Name" required [(ngModel)]="newLogin.firstname" name="firstname"></md-input><br>
+                <md-input type="phone" placeholder="Phone number" required [(ngModel)]="newLogin.phone" name="phone"></md-input><br>
+                <md-input type="email" placeholder="Email" required [(ngModel)]="newLogin.email" name="email"></md-input><br>
+                <md-input type="password" placeholder="Password" required minlength="6" [(ngModel)]="newLogin.password" name="password">
                   <md-hint align="end">Password at least 6 characters</md-hint>
                 </md-input>
-                <md-input type="password" placeholder="Confirm password" required [ngModel]="registerForm.confirm" name="confirm">
+                <md-input type="password" placeholder="Confirm password" required [(ngModel)]="newLogin.confirm" name="confirm">
                   <md-hint align="end">Password must be the same</md-hint>
                 </md-input>
                 <br>
                 <div><md-card [hidden]="registerForm.control" class="alert alert-danger">Password must be the same</md-card></div>
                 <br>
-                <div>By clicking on "Sign up", you agree to Passengair's <a href="#">Terms & Conditions </a>and <a href="#">Privacy Policy</a>.</div>
+                <div>By clicking on "Sign up", you agree to Passengy's <a href="#">Terms & Conditions </a>and <a href="#">Privacy Policy</a>.</div>
                 <button type="submit" md-raised-button  color="primary" [disabled]="!registerForm.valid">Sign up</button>
                 </form>
               </div>

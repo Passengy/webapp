@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: 'dashboard-payment.component.html',
-    styleUrls: ['dashboard.component.css']
+    styleUrls: ['./dashboard.component.css']
 })
 export class DashboardPaymentComponent implements OnInit {
     constructor(private router: Router) { }
